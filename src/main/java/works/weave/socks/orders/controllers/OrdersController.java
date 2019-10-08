@@ -151,7 +151,7 @@ public class OrdersController {
 //        return ResponseEntity.ok(resources);
 //    }
 
-    private float calculateTotal(List<Item> items) {
+    float calculateTotal(List<Item> items) {
         float amount = 0F;
         float shipping = 4.99F;
         amount += items.stream().mapToDouble(i -> i.getQuantity() * i.getUnitPrice()).sum();
